@@ -21,7 +21,7 @@ $brackets->{'round-enter-curly'}=0;
 if ( -d $path ) {
     chdir($path);
     my $previousClosedRoundBracket='';
-    my $command = 'git show -U200 HEAD|grep ^+|sed s/^+//g';
+    my $command = 'git show HEAD|grep ^+|sed s/^+//g';
 
     foreach (`$command`) {
         if (/\)\{/) {
